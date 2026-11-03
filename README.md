@@ -40,6 +40,41 @@ paper, whose zero-bias $\delta$ curves use up to $5\times 10^8$
 networks per point, and the plots are not styled like the
 published figures.
 
+## Results of the full run
+
+The logs, tables and figures of one full run are in
+`results/`.
+
+Generator energy (20000 networks per case). All eight cases
+agree with $\Gamma_L$, with $|z|\le 2.01$. They include bias
+variances $0$ to $4$ and one case with unequal widths and
+weight variances.
+
+Variance (20000 networks per case). All seven cases agree with
+the recursion, with $|z|\le 2.13$.
+
+Crossing density ($L=8$, $p_0=50$, width $600$, $200$ networks
+with $25$ arcs of $600$ samples each). On $\sigma_b^2=0.5$, the
+counted density over $\rho_L$ is between $0.90$ and $1.43$ for
+$\sigma_w^2$ from $1$ to $4.5$. At $\sigma_w^2=0.5$, where
+$\rho_L=0.0003$, the run counted no crossing. At zero bias
+and $\sigma_w^2=2$, the ratio is $1.11$ ($z=1.66$). Crossings
+are rare and vary strongly between networks, so these ratios
+carry large standard errors, listed in the table.
+
+Relative error $\delta$, zero bias ($4\times 10^6$ networks per
+point). The estimates follow the exact value, with $|z|\le 0.89$
+except $L=8$, $p=4$, where $z=-3.6$. The variable $r(\mathbf S)$
+is heavy-tailed at small widths, so the standard error is itself
+uncertain there.
+
+Relative error $\delta$, $\sigma_b^2=0.5$ ($4\times 10^5$ networks
+per point). The value $\sum_l c_l/p$ is first order in $1/p$. At
+$L=4$ the estimates agree with it at $p\ge 16$. At $L=8$ they
+differ from it by about $5.5/p^2$ at $p\le 64$ and agree at
+$p=128$. A difference of this size is the second-order term that
+the first-order value leaves out.
+
 ## License
 
 MIT, see `LICENSE`.
